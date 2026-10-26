@@ -1,0 +1,358 @@
+{
+  "brand": {
+    "name": "飞送",
+    "full": "飞送即时零售",
+    "tagline": "30分钟 · 万物到家",
+    "port": 8106
+  },
+  "tables": [
+    {
+      "name": "stores",
+      "label": "门店",
+      "fields": [
+        {
+          "name": "name",
+          "label": "门店名",
+          "type": "text"
+        },
+        {
+          "name": "location",
+          "label": "位置",
+          "type": "text"
+        },
+        {
+          "name": "radius_km",
+          "label": "配送半径(km)",
+          "type": "number"
+        },
+        {
+          "name": "status",
+          "label": "状态",
+          "type": "text"
+        }
+      ],
+      "seed": [
+        [
+          "飞送前置仓·科技园店",
+          "南山区科技园",
+          3.0,
+          "营业中"
+        ],
+        [
+          "飞送便利店·海岸城店",
+          "南山区海岸城",
+          2.5,
+          "营业中"
+        ],
+        [
+          "飞送药房·桂庙店",
+          "南山区桂庙路",
+          1.8,
+          "营业中"
+        ]
+      ]
+    },
+    {
+      "name": "products",
+      "label": "商品",
+      "fields": [
+        {
+          "name": "title",
+          "label": "商品名",
+          "type": "text"
+        },
+        {
+          "name": "price",
+          "label": "价格(元)",
+          "type": "number"
+        },
+        {
+          "name": "stock",
+          "label": "库存",
+          "type": "int"
+        },
+        {
+          "name": "category",
+          "label": "分类",
+          "type": "text"
+        },
+        {
+          "name": "desc",
+          "label": "描述",
+          "type": "text"
+        }
+      ],
+      "seed": [
+        [
+          "农夫山泉 550ml x12",
+          21,
+          120,
+          "饮品",
+          "门店自提/配送均可"
+        ],
+        [
+          "布洛芬缓释胶囊",
+          19.8,
+          60,
+          "医药",
+          "30分钟送达"
+        ],
+        [
+          "关东煮组合装",
+          15.9,
+          40,
+          "即食",
+          "热食 20分钟送达"
+        ]
+      ]
+    },
+    {
+      "name": "inventory",
+      "label": "门店库存",
+      "fields": [
+        {
+          "name": "store_id",
+          "label": "门店ID",
+          "type": "int"
+        },
+        {
+          "name": "product_id",
+          "label": "商品ID",
+          "type": "int"
+        },
+        {
+          "name": "qty",
+          "label": "实时库存",
+          "type": "int"
+        },
+        {
+          "name": "level",
+          "label": "水位",
+          "type": "text"
+        }
+      ],
+      "seed": [
+        [
+          1,
+          2,
+          45,
+          "充足"
+        ],
+        [
+          1,
+          3,
+          8,
+          "偏低"
+        ],
+        [
+          2,
+          1,
+          96,
+          "充足"
+        ]
+      ]
+    },
+    {
+      "name": "riders",
+      "label": "骑手",
+      "fields": [
+        {
+          "name": "name",
+          "label": "骑手",
+          "type": "text"
+        },
+        {
+          "name": "phone",
+          "label": "电话",
+          "type": "text"
+        },
+        {
+          "name": "status",
+          "label": "状态",
+          "type": "text"
+        },
+        {
+          "name": "score",
+          "label": "评分",
+          "type": "number"
+        }
+      ],
+      "seed": [
+        [
+          "骑手·飞哥",
+          "137****8899",
+          "接单中",
+          4.9
+        ],
+        [
+          "骑手·小旋风",
+          "138****2233",
+          "配送中",
+          4.8
+        ],
+        [
+          "骑手·老周",
+          "139****6677",
+          "休息",
+          4.7
+        ]
+      ]
+    },
+    {
+      "name": "deliveries",
+      "label": "配送单",
+      "fields": [
+        {
+          "name": "delivery_no",
+          "label": "配送单号",
+          "type": "text"
+        },
+        {
+          "name": "order_id",
+          "label": "订单ID",
+          "type": "int"
+        },
+        {
+          "name": "store_id",
+          "label": "门店ID",
+          "type": "int"
+        },
+        {
+          "name": "rider",
+          "label": "骑手",
+          "type": "text"
+        },
+        {
+          "name": "status",
+          "label": "状态",
+          "type": "text"
+        },
+        {
+          "name": "eta",
+          "label": "时效",
+          "type": "text"
+        }
+      ],
+      "seed": [
+        [
+          "DP20261024001",
+          1,
+          1,
+          "骑手·小旋风",
+          "配送中",
+          "预计12分钟"
+        ],
+        [
+          "DP20261024002",
+          2,
+          1,
+          "骑手·飞哥",
+          "已送达",
+          "用时19分钟"
+        ]
+      ]
+    },
+    {
+      "name": "cart",
+      "label": "购物车",
+      "fields": [
+        {
+          "name": "user",
+          "label": "用户",
+          "type": "text"
+        },
+        {
+          "name": "product_id",
+          "label": "商品ID",
+          "type": "int"
+        },
+        {
+          "name": "qty",
+          "label": "数量",
+          "type": "int"
+        }
+      ],
+      "seed": []
+    },
+    {
+      "name": "orders",
+      "label": "订单",
+      "fields": [
+        {
+          "name": "order_no",
+          "label": "订单号",
+          "type": "text"
+        },
+        {
+          "name": "user",
+          "label": "下单人",
+          "type": "text"
+        },
+        {
+          "name": "items",
+          "label": "商品明细",
+          "type": "text"
+        },
+        {
+          "name": "total",
+          "label": "金额(元)",
+          "type": "number"
+        },
+        {
+          "name": "address",
+          "label": "收货地址",
+          "type": "text"
+        },
+        {
+          "name": "status",
+          "label": "状态",
+          "type": "text"
+        }
+      ],
+      "seed": []
+    },
+    {
+      "name": "users",
+      "label": "用户",
+      "fields": [
+        {
+          "name": "username",
+          "label": "用户名",
+          "type": "text"
+        },
+        {
+          "name": "password",
+          "label": "密码",
+          "type": "text"
+        },
+        {
+          "name": "role",
+          "label": "角色",
+          "type": "text"
+        }
+      ],
+      "seed": [
+        [
+          "admin",
+          "admin123",
+          "admin"
+        ],
+        [
+          "ops01",
+          "ops123456",
+          "ops"
+        ],
+        [
+          "view01",
+          "view123456",
+          "viewer"
+        ],
+        [
+          "rider01",
+          "admin123",
+          "骑手"
+        ]
+      ]
+    }
+  ]
+}
