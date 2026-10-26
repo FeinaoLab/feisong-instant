@@ -1,0 +1,2 @@
+window.APP_CONFIG = {"name": "飞送", "short": "飞送", "key": "feisonginstant", "base": "/song/", "color": "#3b82f6", "intro": "30分钟 · 万物到家", "user": "admin", "pwd": "admin123"};
+window.TABLE_ICONS = {"products": "🛍️", "goods": "🛍️", "live_rooms": "📺", "rooms": "📺", "live_comments": "💬", "comments": "💬", "cart": "🛒", "orders": "🧾", "users": "👥", "group_buys": "🔥", "coupons": "🎟️", "stores": "🏪", "suppliers": "🏭", "members": "💳", "skus": "📦", "posts": "📝", "deliveries": "🚚", "warehouses": "🏬", "brands": "🏷️", "customs": "🛃", "riders": "🛵", "categories": "🗂️", "reviews": "⭐"};
