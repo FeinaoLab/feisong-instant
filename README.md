@@ -1,27 +1,42 @@
-# 飞送即时零售
+# 🚀 飞送即时零售
 
-> 30分钟 · 万物到家
+> 分钟级配送，让新鲜与便利触手可及
 
-零依赖（Python 标准库 + SQLite）的 飞送，飞系电商系列成员。
+## 📖 项目简介
 
-## 运行
+飞送即时零售是一个聚焦本地生活的即时配送平台，打通线下门店与线上消费者，通过智能骑手调度与实时追踪系统，实现 30 分钟送达的极致体验，覆盖生鲜、商超、医药、餐饮等即时消费场景。
+
+## ✨ 核心特性
+
+- ⚡ **即时配送** — 30 分钟送达，支持预约单与急送单
+- 🏪 **门店发货** — 就近门店接单、库存同步、拣货优化
+- 🛵 **骑手调度** — AI 智能派单、路径规划、运力弹性调配
+- 📍 **实时追踪** — 订单全链路可视化，骑手位置实时查看
+- 📦 **多品类支持** — 生鲜、商超、医药、鲜花、餐饮全覆盖
+- 💰 **结算体系** — 门店分润、骑手计件、平台佣金自动结算
+- 📊 **运营分析** — 订单热力图、履约时效、用户复购分析
+
+## 🚀 快速开始
 
 ```bash
-cd backend
-python server.py
-# 访问 http://127.0.0.1:8106/ ，三角色: admin/admin123 · ops01/ops123456 · view01/view123456
+# 克隆项目
+git clone https://github.com/dukema81/feisong-instant.git
+cd feisong-instant
+
+# 安装依赖
+npm install
+
+# 启动开发环境
+npm run dev
+
+# 构建生产版本
+npm run build
 ```
 
-## 测试
+## 📄 许可证
 
-```bash
-python -m pytest tests/ -q
-```
+本项目基于 [MIT License](LICENSE) 开源许可协议。
 
-## 目录
+---
 
-- backend/  通用引擎 engine.py + 规格 spec.json + 服务入口 server.py
-- frontend/ 原生 JS SPA（门店 + 统计 + 规格驱动后台）
-- tools/    专属 Logo（icon.svg）+ UI 巡检（ui_check.py，零依赖探活+截图）
-- docs/     建设方案
-- tests/    API 集成测试（真实起服务全链路断言）
+Made with ❤️ by dukema81
